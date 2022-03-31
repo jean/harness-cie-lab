@@ -1,0 +1,23 @@
+connector:
+  name: BootcampGitHubConnector
+  identifier: BootcampGitHubConnector
+  description:
+  orgIdentifier: BootcampOrg
+  projectIdentifier: HarnessBootcamp
+  type: Github
+  spec:
+    url: https://github.com/jean
+    validationRepo: HarnessBootcamp
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
+        spec:
+          username: jean
+          tokenRef: github
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: github
+    executeOnDelegate: true
+    type: Account
