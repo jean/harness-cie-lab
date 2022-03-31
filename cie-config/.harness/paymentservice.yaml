@@ -38,3 +38,13 @@ pipeline:
                                     packages: com.nikp
                                     runOnlySelectedTests: true
                                 description: runTestsWithIntelligence
+                          - step:
+                                type: Run
+                                name: Build
+                                identifier: Build
+                                spec:
+                                    connectorRef: account.bootcampdockerhub
+                                    image: nikpap/mvn-openjdk-8:harness
+                                    command: |-
+                                        cd payment-service
+                                        mvn -Dmaven.test.skip=true clean install -X
