@@ -89,10 +89,7 @@ pipeline:
                       serviceDefinition:
                           type: Kubernetes
                           spec:
-                              variables:
-                                  - name: seusername
-                                    type: String
-                                    value: <+pipeline.variables.seusername>
+                              variables: []
                               manifests:
                                   - manifest:
                                         identifier: values
@@ -149,4 +146,4 @@ pipeline:
     variables:
         - name: seusername
           type: String
-          value: <+input>
+          value: <+pipeline.variables.seusername>
