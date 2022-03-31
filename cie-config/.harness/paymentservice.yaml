@@ -22,7 +22,7 @@ pipeline:
                       type: KubernetesDirect
                       spec:
                           connectorRef: account.bootcampgkecluster
-                          namespace: build-ns
+                          namespace: payment-service-build
                   execution:
                       steps:
                           - step:
