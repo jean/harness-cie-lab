@@ -37,6 +37,16 @@ pipeline:
                                     args: test
                                     packages: com.nikp
                                     runOnlySelectedTests: true
+                                    preCommand: cd payment-service
+                                    reports:
+                                        type: JUnit
+                                        spec:
+                                            paths:
+                                                - " **/*.xml"
+                                    resources:
+                                        limits:
+                                            memory: 2Gi
+                                            cpu: "2"
                                 description: runTestsWithIntelligence
                           - step:
                                 type: Run
