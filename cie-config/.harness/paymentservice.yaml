@@ -48,3 +48,7 @@ pipeline:
                                     command: |-
                                         cd payment-service
                                         mvn -Dmaven.test.skip=true clean install -X
+                                    resources:
+                                        limits:
+                                            memory: 1Gi
+                                            cpu: "1"
