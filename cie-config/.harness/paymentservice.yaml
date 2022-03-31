@@ -146,4 +146,4 @@ pipeline:
     variables:
         - name: seusername
           type: String
-          value: <+pipeline.variables.seusername>
+          value: <+input>
