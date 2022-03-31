@@ -89,7 +89,10 @@ pipeline:
                       serviceDefinition:
                           type: Kubernetes
                           spec:
-                              variables: []
+                              variables:
+                                  - name: seusername
+                                    type: String
+                                    value: <+pipeline.variables.seusername>
                               manifests:
                                   - manifest:
                                         identifier: values
